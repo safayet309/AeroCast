@@ -1,1 +1,106 @@
 
+/* ========================================
+   SkyCast — Global Styles
+   Phase 3: Project Setup & Folder Structure
+======================================== */
+
+/* Base document styling */
+html {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+/* Main page defaults */
+body {
+  min-width: 320px;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Consistent heading typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Consistent paragraph spacing */
+p {
+  line-height: var(--line-height-base);
+}
+
+/* Accessible keyboard focus */
+:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 3px;
+}
+
+/* Text selection */
+::selection {
+  color: var(--color-text-primary);
+  background-color: var(--color-brand-hover);
+}
+
+/* Form controls should remain readable */
+input,
+textarea,
+select,
+button {
+  color: inherit;
+}
+
+/* Prevent disabled controls from appearing active */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Keep hidden elements out of layout */
+[hidden] {
+  display: none !important;
+}
+
+/* Utility: visually hide content while preserving screen-reader access */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Utility: consistent keyboard-focusable skip link */
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: var(--z-toast);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-background);
+  background-color: var(--color-text-primary);
+  border-radius: var(--radius-md);
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
