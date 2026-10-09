@@ -1,0 +1,19 @@
+```json
+{
+  "id": "./",
+  "name": "AeroCast",
+  "short_name": "AeroCast",
+  "description": "Current weather and forecasts with AeroCast.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0b1220",
+  "background_color": "#0b1220",
+  "lang": "en",
+  "categories": [
+    "weather",
+    "utilities"
+  ]
+}
+```
