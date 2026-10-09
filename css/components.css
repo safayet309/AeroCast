@@ -1,1 +1,178 @@
 
+/* ========================================
+   SkyCast — Component Styles Foundation
+   Phase 3: Project Setup & Folder Structure
+======================================== */
+
+/* Base card */
+.card {
+  min-width: 0;
+  padding: var(--space-4);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Elevated card */
+.card--elevated {
+  background-color: var(--color-surface-elevated);
+  box-shadow: var(--shadow-md);
+}
+
+/* Base button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font: inherit;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  text-align: center;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* Primary button */
+.btn--primary {
+  color: #0b1220;
+  background-color: var(--color-brand);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background-color: var(--color-brand-hover);
+}
+
+/* Secondary button */
+.btn--secondary {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-elevated);
+  border-color: var(--color-border);
+}
+
+/* Subtle button */
+.btn--ghost {
+  color: var(--color-text-secondary);
+  background-color: transparent;
+}
+
+.btn--ghost:hover:not(:disabled) {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-elevated);
+}
+
+/* Text input */
+.input {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font: inherit;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:focus-visible {
+  border-color: var(--color-brand);
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(96 165 250 / 20%);
+}
+
+/* Status message */
+.status {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+}
+
+/* Status variants */
+.status--success {
+  color: var(--color-success);
+}
+
+.status--warning {
+  color: var(--color-warning);
+}
+
+.status--error {
+  color: var(--color-danger);
+}
+
+.status--info {
+  color: var(--color-info);
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  border: 0;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface-elevated);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Loading placeholder */
+.skeleton {
+  min-height: 1rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-elevated);
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+
+  .btn {
+    transition: none;
+  }
+}
